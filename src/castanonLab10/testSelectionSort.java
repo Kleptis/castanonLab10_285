@@ -12,12 +12,24 @@ import org.junit.Assert;
 public class testSelectionSort{
 @Test
 public void test() {
+testMixed();
+testDuplicates();
 testPositive();
 testNegative();
 }
     public testSelectionSort() {
     }
 
+
+    public void testMixed(){
+        /** Test data contains with both positive, negative and zeros **/
+		testing(-8,9,0,-10,2);//2,7,8,9,10
+    }
+
+    public void testDuplicates(){
+    	testing(0,0,1,1,1);
+        /** Test data contains duplicates **/
+    }
     public void testPositive(){
         testing(8,9,7,10,2);
         /** add tests to check for this unit test **/
@@ -33,10 +45,8 @@ testNegative();
     	int[] arr = {A,B,C,D,E};
     	int[] sortedArr = arr;
     	Arrays.sort(sortedArr);
-		SelectionSort SS = new SelectionSort();
-		arr=SS.basicSelectionSort(arr);
-		Assert.assertArrayEquals(arr,sortedArr);
-		//int[] maxValue = SS.basicSelectionSort(arr);
-		//assert(maxValue == arr);
+		  SelectionSort SS = new SelectionSort();
+		  arr=SS.basicSelectionSort(arr);
+		  Assert.assertArrayEquals(arr,sortedArr);
     }
 }

@@ -6,10 +6,12 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
+import junit.framework.TestCase;
+
 import static org.junit.Assert.*;
 import org.junit.Assert;
 //import org.junit.Test;
-public class testSelectionSort{
+public class testSelectionSort extends TestCase{
 @Test
 public void test() {
 testPositive();

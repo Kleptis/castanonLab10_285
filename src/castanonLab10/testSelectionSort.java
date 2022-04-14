@@ -14,6 +14,8 @@ public class testSelectionSort{
 public void test() {
 testMixed();
 testDuplicates();
+testPositive();
+testNegative();
 }
     public testSelectionSort() {
     }
@@ -28,15 +30,23 @@ testDuplicates();
     	testing(0,0,1,1,1);
         /** Test data contains duplicates **/
     }
+    public void testPositive(){
+        testing(8,9,7,10,2);
+        /** add tests to check for this unit test **/
+    }
+
+    public void testNegative(){
+        /** Test data contains negative values only **/
+    	testing(-8,-9,-5,-10,-2);
+    }
+
     public void testing(int A, int B, int C, int D, int E) {
     	//int[] Sortedarr = {2,7,8,9,10};
     	int[] arr = {A,B,C,D,E};
     	int[] sortedArr = arr;
     	Arrays.sort(sortedArr);
-		SelectionSort SS = new SelectionSort();
-		arr=SS.basicSelectionSort(arr);
-		Assert.assertArrayEquals(arr,sortedArr);
-		//int[] maxValue = SS.basicSelectionSort(arr);
-		//assert(maxValue == arr);
+		  SelectionSort SS = new SelectionSort();
+		  arr=SS.basicSelectionSort(arr);
+		  Assert.assertArrayEquals(arr,sortedArr);
     }
 }

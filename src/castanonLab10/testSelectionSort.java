@@ -14,11 +14,21 @@ import org.junit.Assert;
 public class testSelectionSort extends TestCase{
 @Test
 public void test() {
-
+  testPositive();
+  testNegative();
 }
     public testSelectionSort() {
     }
 
+    public void testPositive(){
+        testing(8,9,7,10,2);
+        /** add tests to check for this unit test **/
+    }
+
+    public void testNegative(){
+        /** Test data contains negative values only **/
+    	testing(-8,-9,-5,-10,-2);
+    }
 
 
     public void testing(int A, int B, int C, int D, int E) {

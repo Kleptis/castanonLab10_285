@@ -16,6 +16,8 @@ public class testSelectionSort extends TestCase{
 public void test() {
   testPositive();
   testNegative();
+  testMixed();
+  testDuplicates();
 }
     public testSelectionSort() {
     }
@@ -28,6 +30,16 @@ public void test() {
     public void testNegative(){
         /** Test data contains negative values only **/
     	testing(-8,-9,-5,-10,-2);
+    }
+
+    public void testMixed(){
+        /** Test data contains with both positive, negative and zeros **/
+    testing(-8,9,0,-10,2);//2,7,8,9,10
+    }
+
+    public void testDuplicates(){
+      testing(0,0,1,1,1);
+        /** Test data contains duplicates **/
     }
 
 
